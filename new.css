@@ -2,6 +2,32 @@
 * {
   box-sizing: border-box;
 }
+body {
+  overflow: hidden; /* Prevent scrolling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  width: 100%; /* Ensure body takes full width */
+  height: 100vh; /* Set height to viewport height */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.container {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Prevent overflow */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Additional styles for other elements */
+.text {
+  font-size: 1.2em; /* Base font size */
+  line-height: 1.5; /* Line height for readability */
+  padding: 1em; /* Padding around the text */
+  margin: 0; /* Remove default margin */
+}
 
 body {
   font-family: "Varela Round", "Quicksand", sans-serif;
@@ -13,6 +39,7 @@ body {
   margin: 0; /* Remove default margin */
   background-position: -100px;
 }
+
 
 .postcard {
   width: 800px;
@@ -117,4 +144,68 @@ p {
   font-size: 25px;
 
   text-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Base styles for all devices */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding: 1em;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .postcard, .postcard1 {
+    width: 80%; /* Full width on mobile */
+    padding: 1em; /* Adjust padding */
+    box-sizing: border-box; /* Include padding in width */
+  }
+
+  h1 {
+    font-size: 2em; /* Smaller heading size */
+  }
+
+  p {
+    font-size: 14px; /* Smaller paragraph size */
+  }
+
+  .ullu {
+    font-size: 18px; /* Adjust signature font size */
+  }
+}
+
+/* Additional styles for very small devices */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em; /* Further reduce heading size */
+  }
+
+  p {
+    font-size: 12px; /* Further reduce paragraph size */
+  }
+
+  .postcard {
+    padding: 0.5em; /* Less padding for very small screens */
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+}
+
+.postcard {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content */
+  align-items: center; /* Center content */
 }
